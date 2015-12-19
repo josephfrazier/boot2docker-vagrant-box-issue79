@@ -3,7 +3,6 @@ Vagrant.configure(2) do |config|
     d.build_dir = "."
     d.remains_running = false
   end
-  # https://github.com/mitchellh/boot2docker-vagrant-box/issues/79#issuecomment-70225360
-  config.ssh.username = 'docker'
-  config.ssh.password = 'tcuser'
+  # https://github.com/mitchellh/boot2docker-vagrant-box/issues/79#issuecomment-70228916
+  config.ssh.insert_key = false
 end
