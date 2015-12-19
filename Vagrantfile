@@ -3,5 +3,7 @@ Vagrant.configure(2) do |config|
     d.build_dir = "."
     d.remains_running = false
   end
-  config.vm.synced_folder ".", "/vagrant", disabled: true
+  # https://github.com/mitchellh/boot2docker-vagrant-box/issues/79#issuecomment-70225360
+  config.ssh.username = 'docker'
+  config.ssh.password = 'tcuser'
 end
